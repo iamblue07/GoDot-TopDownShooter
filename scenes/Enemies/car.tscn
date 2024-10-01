@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8ufxoytg4guj"]
+
+[ext_resource type="Texture2D" uid="uid://cjocfdqpjflvc" path="res://graphics/car/main.png" id="1_rtiys"]
+[ext_resource type="Script" path="res://scenes/Enemies/car.gd" id="1_uxl0c"]
+[ext_resource type="Texture2D" uid="uid://cbw84bqqfmvsl" path="res://graphics/car/turret.png" id="3_1ecbd"]
+[ext_resource type="Texture2D" uid="uid://c5chtetbbhelr" path="res://graphics/explosions/gun.png" id="4_xly7n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fccrr"]
+radius = 1020.0
+
+[sub_resource type="Animation" id="Animation_ihk0v"]
+resource_name = "laser_load"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Turret/RayCast2D/Line2D:width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 10.0, 20.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Turret/RayCast2D2/Line2D2:width")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.9, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 10.0, 20.0, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"fire"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_6akrp"]
+resource_name = "width2"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0v5l8"]
+_data = {
+"laser_load": SubResource("Animation_ihk0v"),
+"width2": SubResource("Animation_6akrp")
+}
+
+[node name="Car" type="PathFollow2D"]
+script = ExtResource("1_uxl0c")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 11
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(-169, -169, -127, -179, -69, -180, -38, -169, -29, -149, -29, -128, 4, -130, 64, -133, 68, -165, 124, -175, 159, -173, 177, -164, 191, -159, 205, -160, 232, -118, 233, -90, 247, -88, 248, -58, 235, -58, 236, -31, 245, -31, 247, 31, 238, 35, 237, 59, 246, 60, 248, 93, 235, 93, 234, 121, 208, 163, 190, 162, 171, 168, 135, 178, 62, 169, 59, 124, 4, 135, -31, 133, -31, 171, -85, 187, -171, 176, -175, 126, -173, 54, -229, 51, -241, 30, -241, -33, -229, -42, -214, -50, -187, -49, -171, -52, -170, -79, -176, -121)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(59, 2)
+rotation = 1.5708
+texture = ExtResource("1_rtiys")
+
+[node name="NoticeArea" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NoticeArea"]
+shape = SubResource("CircleShape2D_fccrr")
+
+[node name="Turret" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Turret"]
+rotation = 1.5708
+texture = ExtResource("3_1ecbd")
+
+[node name="RayCast2D" type="RayCast2D" parent="Turret"]
+position = Vector2(112, -28)
+target_position = Vector2(900, 0)
+
+[node name="Line2D" type="Line2D" parent="Turret/RayCast2D"]
+points = PackedVector2Array(-1, 0, 896, 0)
+width = 0.0
+default_color = Color(0.4, 0.286275, 0.298039, 1)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Turret"]
+position = Vector2(112, 29)
+target_position = Vector2(900, 0)
+
+[node name="Line2D2" type="Line2D" parent="Turret/RayCast2D2"]
+position = Vector2(2, 0)
+points = PackedVector2Array(0, 0)
+width = 0.0
+default_color = Color(0.4, 0.286275, 0.298039, 1)
+
+[node name="Gun" type="Sprite2D" parent="Turret"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(135, -25)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_xly7n")
+
+[node name="Gun2" type="Sprite2D" parent="Turret"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(136, 29)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_xly7n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0v5l8")
+}
+
+[connection signal="body_entered" from="NoticeArea" to="." method="_on_notice_area_body_entered"]
+[connection signal="body_exited" from="NoticeArea" to="." method="_on_notice_area_body_exited"]

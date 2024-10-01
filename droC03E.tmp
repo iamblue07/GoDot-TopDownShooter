@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6qrnui754hcx"]
+
+[ext_resource type="Texture2D" uid="uid://bcr7axwu3ikur" path="res://graphics/enemies/drone.png" id="1_xypy5"]
+[ext_resource type="Script" path="res://drone.gd" id="1_y13ec"]
+
+[node name="Drone" type="StaticBody2D"]
+script = ExtResource("1_y13ec")
+
+[node name="Drone" type="Sprite2D" parent="."]
+position = Vector2(-3, -3)
+texture = ExtResource("1_xypy5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, -72, -21, -66, -25, -71, -31, -69, -33, -62, -53, -45, -60, -42, -63, -37, -148, -17, -145, -11, -141, -7, -146, -3, -146, 3, -151, 4, -151, 16, -127, 14, -123, 8, -114, 13, -75, 10, -62, 43, -57, 47, -57, 51, -47, 60, -44, 58, -6, 70, 4, 70, 32, 60, 38, 61, 43, 61, 51, 52, 62, 32, 67, 5, 108, 1, 118, -5, 123, 2, 147, -2, 145, -15, 141, -15, 138, -22, 133, -25, 138, -29, 138, -35, 60, -43, 52, -43, 39, -61, 32, -61, 29, -68, 23, -71, 19, -67, 12, -67, 3, -73)

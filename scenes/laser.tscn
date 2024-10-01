@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd758n3xcogy2"]
+
+[ext_resource type="Script" path="res://scenes/laser.gd" id="1_2eqor"]
+[ext_resource type="Texture2D" uid="uid://cva7p70namke6" path="res://graphics/projectiles/blue.png" id="2_xo2wa"]
+[ext_resource type="AudioStream" uid="uid://xqj2p150iphs" path="res://audio/laser.wav" id="3_u5pj3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uxidj"]
+radius = 6.0
+height = 15.8766
+
+[node name="Laser" type="Area2D"]
+collision_layer = 8
+collision_mask = 7
+script = ExtResource("1_2eqor")
+
+[node name="Blue" type="Sprite2D" parent="."]
+position = Vector2(-72, -1)
+rotation = 1.5708
+texture = ExtResource("2_xo2wa")
+
+[node name="Remove_timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+scale = Vector2(1.38653, 1.00777)
+shape = SubResource("CapsuleShape2D_uxidj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_u5pj3")
+volume_db = -20.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Remove_timer" to="." method="_on_remove_timer_timeout"]

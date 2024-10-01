@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://bip4ft1vamm13"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_kio3t"]
+[ext_resource type="Texture2D" uid="uid://doxrpdnn53ik6" path="res://graphics/player/player.png" id="1_p57bd"]
+[ext_resource type="Texture2D" uid="uid://j2j8oasn01di" path="res://graphics/decals/white.png" id="3_ojh2m"]
+
+[sub_resource type="Gradient" id="Gradient_8xqx7"]
+colors = PackedColorArray(0.168627, 0.67451, 0.960784, 1, 1, 1, 0.960784, 0.160784)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ldflo"]
+gradient = SubResource("Gradient_8xqx7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xf2r2"]
+particle_flag_disable_z = true
+spread = 3.0
+initial_velocity_min = 2000.0
+initial_velocity_max = 3000.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 0.7
+color = Color(0.168627, 0.67451, 0.960784, 1)
+color_ramp = SubResource("GradientTexture1D_ldflo")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_exegl"]
+polygon = PackedVector2Array(-45, 62, -70, 56, -80, 32, -85, 30, -91, 22, -88, 15, -97, 7, -98, -22, -84, -47, -66, -47, -64, -55, -40, -60, -11, -62, 0, -47, 7, -42, 7, -37, 12, -29, 22, -28, 32, -18, 91, 6, 97, 11, 97, 30, 91, 34, 84, 38, 68, 38, 58, 54, 22, 53, 21, 43, 6, 40)
+
+[node name="Player" type="CharacterBody2D" groups=["Entity", "Player"]]
+scale = Vector2(2, 2)
+collision_mask = 31
+script = ExtResource("1_kio3t")
+
+[node name="PlayerSkin" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_p57bd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.5708
+polygon = PackedVector2Array(-10.5002, -43.5, -22, -24, -29, -12, -60, 10, -58, 42, -54, 63, -47, 66, -46, 83, -32, 90, -21, 97, -9, 97, 7, 96, 15, 88, 21, 90, 31, 83, 33, 79, 57, 68, 62, 44, 40, -8, 42, -22, 51, -24, 42.9999, -31.5002, 40.9999, -40.0001, 26.9998, -46.0001, -0.00015928, -44)
+
+[node name="TimerLaser" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="TimerGrenade" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="LaserStartPositions" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="LaserStartPositions"]
+position = Vector2(95, 20)
+
+[node name="Marker2D2" type="Marker2D" parent="LaserStartPositions"]
+position = Vector2(92, 14)
+
+[node name="Marker2D3" type="Marker2D" parent="LaserStartPositions"]
+position = Vector2(92, 25)
+
+[node name="GrenadeStartPositions" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="GrenadeStartPositions"]
+position = Vector2(93, 21)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(99, 20)
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_xf2r2")
+texture = ExtResource("3_ojh2m")
+lifetime = 0.15
+one_shot = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_exegl")
+
+[connection signal="timeout" from="TimerLaser" to="." method="_on_timer_main_action_timeout"]
+[connection signal="timeout" from="TimerGrenade" to="." method="_on_timer_secondary_action_timeout"]

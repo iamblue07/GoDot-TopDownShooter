@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgt8w16civqcj"]
+
+[ext_resource type="Script" path="res://scenes/Arena.gd" id="1_sl4sc"]
+[ext_resource type="Texture2D" uid="uid://cjoeagehh6us4" path="res://graphics/objects/gate.png" id="1_w8e2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2t2o"]
+size = Vector2(822, 134)
+
+[node name="Arena" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_sl4sc")
+
+[node name="ArenaSouth" type="Sprite2D" parent="."]
+position = Vector2(249, 108)
+texture = ExtResource("1_w8e2f")
+
+[node name="ArenaNorth" type="Sprite2D" parent="."]
+position = Vector2(373.026, -1409.06)
+rotation = -3.14135
+texture = ExtResource("1_w8e2f")
+
+[node name="CollisionPolygon2DLeftBorder" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-123, 826, -956, 832, -1095, 745, -1114, 638, -1108, -1967, -1065, -2069, -1005, -2113, -930, -2128, -120, -2128, -120, -2192, -963, -2188, -1043, -2166, -1111, -2114, -1176, -2008, -1188, -1963, -1191, 643, -1165, 742, -1117, 818, -1010, 874, -951, 890, -120, 883)
+
+[node name="CollisionPolygon2DRightBorder" type="CollisionPolygon2D" parent="."]
+position = Vector2(631, -1307)
+rotation = -3.1379
+polygon = PackedVector2Array(-108.951, 826.408, -956, 832, -1095, 745, -1114, 638, -1108, -1967, -1065, -2069, -1005, -2113, -930, -2128, -120, -2128, -120, -2192, -963, -2188, -1043, -2166, -1111, -2114, -1176, -2008, -1188, -1963, -1191, 643, -1165, 742, -1117, 818, -1010, 874, -951, 890, -104.745, 882.392)
+
+[node name="Area2DSouthArenaEntrace" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DSouthArenaEntrace"]
+position = Vector2(304, 838)
+shape = SubResource("RectangleShape2D_a2t2o")
+
+[node name="Area2DNorthArenaEntrace2" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DNorthArenaEntrace2"]
+position = Vector2(305, -2125)
+shape = SubResource("RectangleShape2D_a2t2o")
+
+[connection signal="body_entered" from="Area2DSouthArenaEntrace" to="." method="_on_area_2d_south_arena_entrace_body_entered"]
+[connection signal="body_entered" from="Area2DNorthArenaEntrace2" to="." method="_on_area_2d_north_arena_entrace_2_body_entered"]

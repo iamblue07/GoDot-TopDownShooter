@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://blb44srx1vhhy"]
+
+[ext_resource type="Script" path="res://scenes/RootLevel.gd" id="1_f5t1n"]
+[ext_resource type="PackedScene" uid="uid://7imfut3j2u8k" path="res://scenes/ui.tscn" id="3_xba16"]
+[ext_resource type="PackedScene" uid="uid://bip4ft1vamm13" path="res://scenes/player.tscn" id="9_eaf2p"]
+
+[node name="RootLevel" type="Node2D"]
+script = ExtResource("1_f5t1n")
+
+[node name="Decorations" type="Node2D" parent="."]
+
+[node name="Decals" type="Node2D" parent="."]
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Level Barriers" type="Node2D" parent="."]
+
+[node name="Special Colisions" type="StaticBody2D" parent="."]
+
+[node name="Navigation Meshes" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("9_eaf2p")]
+position = Vector2(591, 323)
+scale = Vector2(1.5, 1.5)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.4, 0.4)
+position_smoothing_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." instance=ExtResource("3_xba16")]
+
+[connection signal="grenade" from="Player" to="." method="_on_player_grenade"]
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]

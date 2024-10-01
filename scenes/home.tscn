@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxgf0uksxhud4"]
+
+[ext_resource type="Texture2D" uid="uid://c2idefachvtrx" path="res://graphics/objects/base.png" id="1_8epe5"]
+[ext_resource type="Texture2D" uid="uid://bw4pd53dth8nw" path="res://graphics/objects/Box.png" id="2_jy850"]
+[ext_resource type="PackedScene" uid="uid://dvabmvm5fhh6n" path="res://scenes/Bed.tscn" id="3_w6xx0"]
+[ext_resource type="Texture2D" uid="uid://d1m7iv7g8s8tt" path="res://graphics/objects/door.png" id="4_7w14e"]
+[ext_resource type="Texture2D" uid="uid://bhwhhmlk6c6xo" path="res://graphics/objects/Billboard.png" id="5_8l7kg"]
+[ext_resource type="Texture2D" uid="uid://c8j5c5gdwecd0" path="res://graphics/objects/light.png" id="6_2p6jq"]
+[ext_resource type="Texture2D" uid="uid://r2gmojaikg0s" path="res://graphics/objects/wall_lamp.png" id="7_rca6v"]
+
+[node name="Home" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 15
+
+[node name="Base" type="Sprite2D" parent="."]
+position = Vector2(579, 318.5)
+scale = Vector2(2.86139, 3.60109)
+texture = ExtResource("1_8epe5")
+
+[node name="Box" type="Sprite2D" parent="."]
+position = Vector2(207, 207)
+rotation = 3.14123
+scale = Vector2(0.667697, 0.658746)
+texture = ExtResource("2_jy850")
+
+[node name="Bed" parent="." instance=ExtResource("3_w6xx0")]
+position = Vector2(844, 267)
+scale = Vector2(0.692679, 0.76037)
+
+[node name="Door" type="Sprite2D" parent="."]
+position = Vector2(478, 584)
+rotation = -1.57077
+scale = Vector2(0.32564, 8.42313)
+texture = ExtResource("4_7w14e")
+
+[node name="Billboard" type="Sprite2D" parent="."]
+position = Vector2(721, 583)
+scale = Vector2(0.237785, 0.921875)
+texture = ExtResource("5_8l7kg")
+
+[node name="Light" type="Sprite2D" parent="."]
+position = Vector2(195, 100)
+texture = ExtResource("6_2p6jq")
+
+[node name="Light2" type="Sprite2D" parent="."]
+position = Vector2(958, 97)
+texture = ExtResource("6_2p6jq")
+
+[node name="WallLamp" type="Sprite2D" parent="."]
+position = Vector2(687, 142)
+scale = Vector2(0.237169, 0.289583)
+texture = ExtResource("7_rca6v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 604, 31, 648, 398, 648, 398, 522, 88, 524, 61, 500, 63, 83, 82, 68, 1069, 76, 1087, 95, 1086, 509, 1074, 525, 553, 525, 555, 647, 1114, 648, 1158, 596, 1153, 59, 1095, -4, 52, -4, 3, 49)
