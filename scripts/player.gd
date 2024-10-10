@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var max_speed: int = 800
+var max_speed: int = 1500
 @export var speed: int = max_speed
 
 var can_laser = true

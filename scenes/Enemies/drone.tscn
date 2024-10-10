@@ -12,7 +12,7 @@ shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/progress = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xlx1"]
-radius = 2218.15
+radius = 6623.01
 
 [sub_resource type="Animation" id="Animation_olqbm"]
 length = 0.001
@@ -99,12 +99,10 @@ collision_mask = 15
 script = ExtResource("1_y13ec")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-rotation = 1.5708
 polygon = PackedVector2Array(-5, -72, -21, -66, -25, -71, -31, -69, -33, -62, -53, -45, -60, -42, -63, -37, -148, -17, -145, -11, -141, -7, -146, -3, -146, 3, -151, 4, -151, 16, -127, 14, -123, 8, -114, 13, -75, 10, -62, 43, -57, 47, -57, 51, -47, 60, -44, 58, -6, 70, 4, 70, 32, 60, 38, 61, 43, 61, 51, 52, 62, 32, 67, 5, 108, 1, 118, -5, 123, 2, 147, -2, 145, -15, 141, -15, 138, -22, 133, -25, 138, -29, 138, -35, 60, -43, 52, -43, 39, -61, 32, -61, 29, -68, 23, -71, 19, -67, 12, -67, 3, -73)
 
 [node name="Drone" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_cx8nc")
-rotation = 1.5708
 texture = ExtResource("1_xypy5")
 
 [node name="Notice Area" type="Area2D" parent="."]
@@ -127,4 +125,11 @@ libraries = {
 [node name="HurtAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_87f8o")
 
+[node name="NavigationTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
 [connection signal="body_entered" from="Notice Area" to="." method="_on_notice_area_body_entered"]
+[connection signal="timeout" from="NavigationTimer" to="." method="_on_navigation_timer_timeout"]

@@ -12,7 +12,7 @@ func _ready():
 	$NavigationAgent2D.path_desired_distance = 4.0
 	$NavigationAgent2D.target_desired_distance = 4.0
 	$NavigationAgent2D.target_position = Globals.player_pos
-
+	
 func _physics_process(_delta):
 	if active:
 		var next_path_pos: Vector2 = $NavigationAgent2D.get_next_path_position()
@@ -58,3 +58,5 @@ func hit(damage_taken):
 func attack():
 	if player_in_range:
 		Globals.health -= damage
+
+

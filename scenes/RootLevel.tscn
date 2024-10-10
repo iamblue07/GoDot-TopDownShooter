@@ -23,12 +23,16 @@ script = ExtResource("1_f5t1n")
 
 [node name="Navigation Meshes" type="Node2D" parent="."]
 
+[node name="MonsterRespawnPoints" type="Node2D" parent="."]
+
+[node name="Timers" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource("9_eaf2p")]
 position = Vector2(591, 323)
 scale = Vector2(1.5, 1.5)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.15, 0.15)
 position_smoothing_enabled = true
 metadata/_edit_lock_ = true
 

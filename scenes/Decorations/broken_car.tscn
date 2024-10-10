@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://fgl114on37kf"]
+
+[ext_resource type="Texture2D" uid="uid://d0tmu4m4qh6io" path="res://graphics/decals/blood.png" id="1_cqd6y"]
+[ext_resource type="Texture2D" uid="uid://cjocfdqpjflvc" path="res://graphics/car/main.png" id="2_xwg80"]
+[ext_resource type="Texture2D" uid="uid://pyritwesw5bt" path="res://graphics/decals/moss/moss_2.png" id="3_4f114"]
+[ext_resource type="Texture2D" uid="uid://bgcexml55r6w6" path="res://graphics/decals/moss/moss_5.png" id="4_mn8tn"]
+
+[node name="BrokenCar" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PackedVector2Array(-74, -191, -150, -168, -197, -100, -186, -18, -165, 46, -193, 103, -184, 228, -80, 245, -36, 309, 53, 302, 77, 239, 178, 241, 202, 112, 176, 50, 189, -22, 195, -109, 146, -181, 68, -198)
+
+[node name="Blood" type="Sprite2D" parent="."]
+modulate = Color(0.266667, 0.0156863, 0.0509804, 0.862745)
+position = Vector2(40, -8)
+texture = ExtResource("1_cqd6y")
+
+[node name="Main" type="Sprite2D" parent="."]
+modulate = Color(0.521569, 0.290196, 0.196078, 0.984314)
+texture = ExtResource("2_xwg80")
+
+[node name="Moss2" type="Sprite2D" parent="."]
+modulate = Color(0.329412, 0.364706, 0.423529, 0.423529)
+position = Vector2(-74, -81)
+texture = ExtResource("3_4f114")
+
+[node name="Moss3" type="Sprite2D" parent="."]
+modulate = Color(0.329412, 0.364706, 0.423529, 0.423529)
+position = Vector2(66, 184)
+rotation = -1.02057
+texture = ExtResource("3_4f114")
+
+[node name="Moss5" type="Sprite2D" parent="."]
+modulate = Color(0.407843, 0.639216, 0.396078, 0.768627)
+position = Vector2(-136, 170)
+rotation = -0.580008
+texture = ExtResource("4_mn8tn")
