@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0jkrixoyqxx7"]
 
-[ext_resource type="PackedScene" uid="uid://24sdhqlw3sss" path="res://scenes/GenericItemContainer.tscn" id="1_0pb5r"]
-[ext_resource type="Script" path="res://scenes/toilet.gd" id="2_7ydj0"]
+[ext_resource type="PackedScene" uid="uid://24sdhqlw3sss" path="res://scenes/Generics/GenericItemContainer.tscn" id="1_0pb5r"]
+[ext_resource type="Script" path="res://scripts/toilet.gd" id="2_7ydj0"]
 [ext_resource type="Texture2D" uid="uid://c3kkwmnygyd7f" path="res://graphics/objects/toilet.png" id="2_bdjjy"]
 [ext_resource type="Texture2D" uid="uid://bsv1fins1t3xq" path="res://graphics/objects/lid.png" id="4_h8fna"]
 

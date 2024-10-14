@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://byaln02qqiouw"]
 
-[ext_resource type="PackedScene" uid="uid://blb44srx1vhhy" path="res://scenes/RootLevel.tscn" id="1_vfp48"]
-[ext_resource type="Script" path="res://scenes/PlaytestInterior.gd" id="2_srclf"]
+[ext_resource type="PackedScene" uid="uid://blb44srx1vhhy" path="res://scenes/Generics/RootLevel.tscn" id="1_vfp48"]
+[ext_resource type="Script" path="res://scripts/PlaytestInterior.gd" id="2_srclf"]
 [ext_resource type="Texture2D" uid="uid://dpt1a2sk1vuov" path="res://graphics/decals/brushes/brush051.png" id="3_y78as"]
 [ext_resource type="Texture2D" uid="uid://k6o266tyhhfh" path="res://graphics/decals/brushes/brush044.png" id="4_qr6ma"]
 [ext_resource type="Texture2D" uid="uid://pyritwesw5bt" path="res://graphics/decals/moss/moss_2.png" id="5_yobo3"]
@@ -10,10 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://ybylcabvm4e3" path="res://graphics/ground/dirt.png" id="8_qf0h5"]
 [ext_resource type="Texture2D" uid="uid://dtrux1lm7n0sh" path="res://graphics/ground/Mesh.png" id="9_m7kf6"]
 [ext_resource type="TileSet" uid="uid://bbyals1q5q8kc" path="res://Tilesets/House.tres" id="10_h53oc"]
-[ext_resource type="PackedScene" uid="uid://c4tqb6md7qt1p" path="res://scenes/steam_vent.tscn" id="11_us3oh"]
-[ext_resource type="PackedScene" uid="uid://c0vcu6b0elbgk" path="res://scenes/fan.tscn" id="12_nwaas"]
-[ext_resource type="PackedScene" uid="uid://ddsd6busk2j1g" path="res://scenes/Crate.tscn" id="13_dottv"]
-[ext_resource type="PackedScene" uid="uid://db21wieuj7d0u" path="res://scenes/simple_light.tscn" id="14_gcgpq"]
+[ext_resource type="PackedScene" uid="uid://c4tqb6md7qt1p" path="res://scenes/Decorations/steam_vent.tscn" id="11_us3oh"]
+[ext_resource type="PackedScene" uid="uid://c0vcu6b0elbgk" path="res://scenes/Decorations/fan.tscn" id="12_nwaas"]
+[ext_resource type="PackedScene" uid="uid://ddsd6busk2j1g" path="res://scenes/Decorations/Crate.tscn" id="13_dottv"]
+[ext_resource type="PackedScene" uid="uid://db21wieuj7d0u" path="res://scenes/Lights/simple_light.tscn" id="14_gcgpq"]
 [ext_resource type="PackedScene" uid="uid://dtd71k7puk2qw" path="res://Items/item.tscn" id="15_4dy66"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t02k1"]
@@ -21,59 +21,6 @@ size = Vector2(1104, 255)
 
 [node name="Level_2" instance=ExtResource("1_vfp48")]
 script = ExtResource("2_srclf")
-
-[node name="Decals" parent="." index="0"]
-z_index = 1
-
-[node name="Brush051" type="Sprite2D" parent="Decals" index="0"]
-modulate = Color(0.4, 0, 0.054902, 0.505882)
-position = Vector2(-3719, -2703)
-texture = ExtResource("3_y78as")
-
-[node name="Brush052" type="Sprite2D" parent="Decals" index="1"]
-modulate = Color(0.4, 0, 0.054902, 0.505882)
-position = Vector2(3261, -3455)
-texture = ExtResource("3_y78as")
-
-[node name="Brush053" type="Sprite2D" parent="Decals" index="2"]
-modulate = Color(0.4, 0, 0.054902, 0.505882)
-position = Vector2(4553, 2885)
-texture = ExtResource("3_y78as")
-
-[node name="Brush044" type="Sprite2D" parent="Decals" index="3"]
-modulate = Color(0.0196078, 0.215686, 0.133333, 0.560784)
-position = Vector2(-4671, 3905)
-rotation = 3.0411
-scale = Vector2(0.326455, 0.466524)
-texture = ExtResource("4_qr6ma")
-
-[node name="Brush045" type="Sprite2D" parent="Decals" index="4"]
-modulate = Color(0.0196078, 0.215686, 0.133333, 0.560784)
-position = Vector2(3530, 4713)
-rotation = 2.46063
-scale = Vector2(0.504079, 0.17561)
-texture = ExtResource("4_qr6ma")
-
-[node name="Moss2" type="Sprite2D" parent="Decals" index="5"]
-modulate = Color(1, 1, 1, 0.54902)
-position = Vector2(-1661, 1104)
-rotation = -0.465266
-scale = Vector2(-2.32454, 1.8981)
-texture = ExtResource("5_yobo3")
-
-[node name="Brush054" type="Sprite2D" parent="Decals" index="6"]
-modulate = Color(0.0745098, 0.25098, 0.105882, 0.839216)
-position = Vector2(-269, -3344)
-rotation = 2.84587
-scale = Vector2(1.21028, -3.89041)
-texture = ExtResource("3_y78as")
-
-[node name="Brush055" type="Sprite2D" parent="Decals" index="7"]
-modulate = Color(0.333333, 0.137255, 0, 0.533333)
-position = Vector2(521, -3074)
-rotation = -0.584799
-scale = Vector2(2.63727, 0.966635)
-texture = ExtResource("6_ljcpo")
 
 [node name="Ground, Walls, Etc" type="Node2D" parent="." index="1"]
 metadata/_edit_lock_ = true
@@ -268,19 +215,72 @@ position = Vector2(-1556, -3198)
 [node name="SimpleLight6" parent="Ground, Walls, Etc" index="28" instance=ExtResource("14_gcgpq")]
 position = Vector2(1964, -3208)
 
-[node name="Projectiles" parent="." index="2"]
-metadata/_edit_lock_ = true
+[node name="Decals" parent="." index="2"]
+z_index = 1
+
+[node name="Brush051" type="Sprite2D" parent="Decals" index="0"]
+modulate = Color(0.4, 0, 0.054902, 0.505882)
+position = Vector2(-3719, -2703)
+texture = ExtResource("3_y78as")
+
+[node name="Brush052" type="Sprite2D" parent="Decals" index="1"]
+modulate = Color(0.4, 0, 0.054902, 0.505882)
+position = Vector2(3261, -3455)
+texture = ExtResource("3_y78as")
+
+[node name="Brush053" type="Sprite2D" parent="Decals" index="2"]
+modulate = Color(0.4, 0, 0.054902, 0.505882)
+position = Vector2(4553, 2885)
+texture = ExtResource("3_y78as")
+
+[node name="Brush044" type="Sprite2D" parent="Decals" index="3"]
+modulate = Color(0.0196078, 0.215686, 0.133333, 0.560784)
+position = Vector2(-4671, 3905)
+rotation = 3.0411
+scale = Vector2(0.326455, 0.466524)
+texture = ExtResource("4_qr6ma")
+
+[node name="Brush045" type="Sprite2D" parent="Decals" index="4"]
+modulate = Color(0.0196078, 0.215686, 0.133333, 0.560784)
+position = Vector2(3530, 4713)
+rotation = 2.46063
+scale = Vector2(0.504079, 0.17561)
+texture = ExtResource("4_qr6ma")
+
+[node name="Moss2" type="Sprite2D" parent="Decals" index="5"]
+modulate = Color(1, 1, 1, 0.54902)
+position = Vector2(-1661, 1104)
+rotation = -0.465266
+scale = Vector2(-2.32454, 1.8981)
+texture = ExtResource("5_yobo3")
+
+[node name="Brush054" type="Sprite2D" parent="Decals" index="6"]
+modulate = Color(0.0745098, 0.25098, 0.105882, 0.839216)
+position = Vector2(-269, -3344)
+rotation = 2.84587
+scale = Vector2(1.21028, -3.89041)
+texture = ExtResource("3_y78as")
+
+[node name="Brush055" type="Sprite2D" parent="Decals" index="7"]
+modulate = Color(0.333333, 0.137255, 0, 0.533333)
+position = Vector2(521, -3074)
+rotation = -0.584799
+scale = Vector2(2.63727, 0.966635)
+texture = ExtResource("6_ljcpo")
 
 [node name="Item" parent="." index="3" instance=ExtResource("15_4dy66")]
 position = Vector2(2229, -314)
 scale = Vector2(0.994914, 1.0079)
 
-[node name="Player" parent="." index="6"]
+[node name="Projectiles" parent="." index="4"]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="12"]
 position = Vector2(49, 21)
 
 [node name="Camera2D" parent="Player" index="8"]
 zoom = Vector2(0.2, 0.2)
 
 [connection signal="body_entered" from="Ground, Walls, Etc/South_Entrance" to="." method="_on_south_entrance_body_entered"]
-[connection signal="body_entered" from="Ground, Walls, Etc/North_Entrance" to="." method="_on_south_entrance_2_body_entered"]
 [connection signal="body_entered" from="Ground, Walls, Etc/North_Entrance" to="." method="_on_north_entrance_body_entered"]
+[connection signal="body_entered" from="Ground, Walls, Etc/North_Entrance" to="." method="_on_south_entrance_2_body_entered"]

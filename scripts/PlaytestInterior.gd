@@ -1,6 +1,6 @@
 extends RootLevel
 
-var level_1_scene_string : String = "res://scenes/level_1.tscn"
+var level_1_scene_string : String = "res://scenes/Levels and Locations/PlaytestExterior.tscn"
 
 func _on_south_entrance_body_entered(_body):
 	var tween = create_tween()

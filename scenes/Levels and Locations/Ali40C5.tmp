@@ -1,12 +1,12 @@
-[gd_scene load_steps=43 format=3 uid="uid://dvis706ww20dr"]
+[gd_scene load_steps=44 format=3 uid="uid://dvis706ww20dr"]
 
-[ext_resource type="PackedScene" uid="uid://blb44srx1vhhy" path="res://scenes/RootLevel.tscn" id="1_tryr3"]
-[ext_resource type="Script" path="res://scenes/AlienInfestation.gd" id="2_jp6q1"]
+[ext_resource type="PackedScene" uid="uid://blb44srx1vhhy" path="res://scenes/Generics/RootLevel.tscn" id="1_tryr3"]
+[ext_resource type="Script" path="res://scripts/AlienInfestation.gd" id="2_jp6q1"]
 [ext_resource type="Texture2D" uid="uid://cjigcv8y4ke1s" path="res://graphics/ground/stones.png" id="3_y837b"]
 [ext_resource type="TileSet" uid="uid://cncbhm762d52s" path="res://Tilesets/LevelTerrain.tres" id="4_e10l7"]
-[ext_resource type="PackedScene" uid="uid://ddsd6busk2j1g" path="res://scenes/Crate.tscn" id="5_iuy8h"]
-[ext_resource type="PackedScene" uid="uid://cnufdmfynr74j" path="res://scenes/House.tscn" id="7_02w7m"]
-[ext_resource type="PackedScene" uid="uid://bt1iv8b5lvvk6" path="res://scenes/box.tscn" id="7_v7icp"]
+[ext_resource type="PackedScene" uid="uid://ddsd6busk2j1g" path="res://scenes/Decorations/Crate.tscn" id="5_iuy8h"]
+[ext_resource type="PackedScene" uid="uid://cnufdmfynr74j" path="res://scenes/Levels and Locations/House.tscn" id="7_02w7m"]
+[ext_resource type="PackedScene" uid="uid://bt1iv8b5lvvk6" path="res://scenes/Decorations/box.tscn" id="7_v7icp"]
 [ext_resource type="Texture2D" uid="uid://bxkpwsoscmwpo" path="res://graphics/decals/dirt_patch.png" id="8_xptyp"]
 [ext_resource type="Texture2D" uid="uid://d0tmu4m4qh6io" path="res://graphics/decals/blood.png" id="9_q6dj0"]
 [ext_resource type="Texture2D" uid="uid://cdhhpf3ub2vpx" path="res://graphics/decals/moss/moss_3.png" id="10_xio6l"]
@@ -21,8 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://crovthvj18eyq" path="res://graphics/objects/corner.png" id="19_3hvci"]
 [ext_resource type="Texture2D" uid="uid://b3hd5w3rhisge" path="res://graphics/objects/electric_hole.png" id="20_j46va"]
 [ext_resource type="Texture2D" uid="uid://c0np8du8swrfr" path="res://graphics/objects/ventilation_surface_small.png" id="21_6mbir"]
-[ext_resource type="PackedScene" uid="uid://db21wieuj7d0u" path="res://scenes/simple_light.tscn" id="22_2ydya"]
-[ext_resource type="PackedScene" uid="uid://d4hij8yrxhyjn" path="res://scenes/wall_light.tscn" id="23_3dger"]
+[ext_resource type="PackedScene" uid="uid://db21wieuj7d0u" path="res://scenes/Lights/simple_light.tscn" id="22_2ydya"]
+[ext_resource type="PackedScene" uid="uid://d4hij8yrxhyjn" path="res://scenes/Lights/wall_light.tscn" id="23_3dger"]
 [ext_resource type="Texture2D" uid="uid://bq0gxl7xsidri" path="res://graphics/objects/infestation/large.png" id="24_uduoo"]
 [ext_resource type="Texture2D" uid="uid://dlk7sp58a1jcv" path="res://graphics/objects/infestation/line.png" id="25_lrhfv"]
 [ext_resource type="Texture2D" uid="uid://b5h06rxxx8hry" path="res://graphics/objects/infestation/small_2.png" id="26_gpaex"]
@@ -33,14 +33,15 @@
 [ext_resource type="Texture2D" uid="uid://ce2wsv63gruvd" path="res://graphics/objects/infestation/medium.png" id="30_itsnp"]
 [ext_resource type="Texture2D" uid="uid://dpxa5nvuspi1d" path="res://graphics/objects/infestation/small_3.png" id="31_6gxs2"]
 [ext_resource type="PackedScene" uid="uid://fgl114on37kf" path="res://scenes/Decorations/broken_car.tscn" id="31_5185x"]
-[ext_resource type="PackedScene" uid="uid://c0vcu6b0elbgk" path="res://scenes/fan.tscn" id="32_2gme4"]
+[ext_resource type="PackedScene" uid="uid://c0vcu6b0elbgk" path="res://scenes/Decorations/fan.tscn" id="32_2gme4"]
 [ext_resource type="Texture2D" uid="uid://lt1jmyile2i5" path="res://graphics/objects/ventilation_surface.png" id="33_332mf"]
 [ext_resource type="Texture2D" uid="uid://bw4pd53dth8nw" path="res://graphics/objects/Box.png" id="34_g6mru"]
 [ext_resource type="Texture2D" uid="uid://cjoeagehh6us4" path="res://graphics/objects/gate.png" id="35_vildg"]
 [ext_resource type="Texture2D" uid="uid://c2idefachvtrx" path="res://graphics/objects/base.png" id="36_fnsct"]
-[ext_resource type="PackedScene" uid="uid://c4tqb6md7qt1p" path="res://scenes/steam_vent.tscn" id="37_tt6fa"]
+[ext_resource type="PackedScene" uid="uid://c4tqb6md7qt1p" path="res://scenes/Decorations/steam_vent.tscn" id="37_tt6fa"]
 [ext_resource type="PackedScene" uid="uid://dwnx65qiwdyw0" path="res://scenes/Decorations/car_depo.tscn" id="40_pa1nf"]
 [ext_resource type="PackedScene" uid="uid://b3n6t283y81lu" path="res://scenes/Enemies/bug.tscn" id="41_nm57b"]
+[ext_resource type="PackedScene" uid="uid://6qrnui754hcx" path="res://scenes/Enemies/drone.tscn" id="42_k8rmv"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_86ap8"]
 vertices = PackedVector2Array(-1587, -12231, -1587, -12230, -1609, -13890, 2434, -14414, 2434, -14415, 2438, -14141, -2642, -16477, -1074, -16492, 6657, -16420, 2867, -15486, 926, -15474, -8935, -15897, -8931, -16342, 3176, -14361, 6579, -13131, 3107, -12825, 3156, -14121, 3043, -13507, 2887, -15288, 2655, -14506, 2642, -15279, 2438, -14130, 2800, -13590, 2458, -13597, 2456, -13191, 2775, -12961, 2739, -12498, 2548, -12545, 1495, -13213, 880, -10581, 1430, -10932, 1441, -10547, -1672, -5492, 873, -10928, 1583, -12029, 6579, -10993, 3049, -11807, -8209, -5582, -8163, 1160, -15837, 1048, -15911, -8704, -15908, -8704, 2654, -14506, 2426, -14556, 1095, -14569, 1095, -15305, 2642, -15280, 819, -14071, 1505, -13571, 826, -13822, 6607, -8969, 6545, 1116, -1536, 1160, 1860, -10588, -11599, -9709, -11599, -10840, -8978, -10873, -1840, -10619, 919, -14688, 534, -14685, 370, -14732, -8931, -16344, -14764, -16395, -14775, -15873, -15891, -16300, -14833, -9709, 743, -14460, 659, -14163, 1599, -10960, 2416, -12418, 2415, -12417, 854, -13245, 2221, -12175, 1857, -12088, 21, -13277, -1245, -11237, -1542, -11365, -1315, -13952, 1941, -11080, 2010, -11675, 1941, -11079, 832, -13574, 346, -13596, 287, -13775, 523, -13757, -1015, -14296, -281, -14296, 10, -14175, -1121, -10972, -2015, -14815, -8978, -10886, -1984, -12290, -1984, -12289, 747, -10576)
@@ -699,8 +700,10 @@ scale = Vector2(1.61806, 2.52973)
 texture = ExtResource("8_xptyp")
 
 [node name="Bug" parent="Enemies" index="0" instance=ExtResource("41_nm57b")]
-visible = false
-position = Vector2(9286, 9196)
+position = Vector2(7414, 7749)
+
+[node name="Drone" parent="Enemies" index="1" instance=ExtResource("42_k8rmv")]
+position = Vector2(5476, 7907)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Special Colisions" index="0"]
 polygon = PackedVector2Array(633, -14511, 654, -14480, 721, -14500, 786, -14524, 764, -14587, 701, -14569, 683, -14545)

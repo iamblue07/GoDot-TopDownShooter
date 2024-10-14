@@ -1,7 +1,7 @@
-[gd_scene load_steps=42 format=3 uid="uid://b3n6t283y81lu"]
+[gd_scene load_steps=41 format=3 uid="uid://b3n6t283y81lu"]
 
-[ext_resource type="Script" path="res://scenes/Enemies/bug.gd" id="1_28km5"]
-[ext_resource type="Shader" path="res://scenes/Enemies/bug.gdshader" id="1_m0uv0"]
+[ext_resource type="Script" path="res://scripts/bug.gd" id="1_28km5"]
+[ext_resource type="Shader" path="res://scripts/bug.gdshader" id="1_m0uv0"]
 [ext_resource type="Texture2D" uid="uid://c8ufp13srdwb1" path="res://graphics/enemies/bug/attack/00010.png" id="2_8f6k8"]
 [ext_resource type="Texture2D" uid="uid://bqtc6e2m33fmn" path="res://graphics/enemies/bug/attack/00011.png" id="3_rhw3p"]
 [ext_resource type="Texture2D" uid="uid://bu4e6fw838ehe" path="res://graphics/enemies/bug/attack/00012.png" id="4_ya0h4"]
@@ -147,9 +147,6 @@ animations = [{
 radius = 24.0
 height = 98.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x3u7k"]
-radius = 3831.8
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_tcnt8"]
 radius = 55.3263
 
@@ -188,12 +185,6 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_8nax0")
 
-[node name="NoticeArea" type="Area2D" parent="."]
-collision_layer = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NoticeArea"]
-shape = SubResource("CircleShape2D_x3u7k")
-
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
@@ -227,8 +218,6 @@ stream = ExtResource("34_8ts1c")
 debug_enabled = true
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="body_entered" from="NoticeArea" to="." method="_on_notice_area_body_entered"]
-[connection signal="body_exited" from="NoticeArea" to="." method="_on_notice_area_body_exited"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="body_exited" from="AttackArea" to="." method="_on_attack_area_body_exited"]
 [connection signal="timeout" from="Timers/AttackTimer" to="." method="_on_attack_timer_timeout"]

@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-var active: bool = false
 var max_speed: int = 1000
 var speed: int = 0
 
@@ -9,6 +8,7 @@ var health: int = 20
 var explosion_active: bool = false
 var explosion_damage: int = 30
 var speed_multiplier: int = 1
+var update_navigation: bool = true
 
 func hit(damage_taken):
 	health -= damage_taken
@@ -19,27 +19,27 @@ func hit(damage_taken):
 	$Drone.material.set_shader_parameter("progress", 0)
 	
 	if health <= 0:
-		speed = 0
 		$AnimationPlayer.play("explosion")
-		speed_multiplier = 0
 
 func _ready():
 	$Explosion.hide()
 	$NavigationAgent2D.path_desired_distance = 4.0
 	$NavigationAgent2D.target_desired_distance = 4.0
 	$NavigationAgent2D.target_position = Globals.player_pos
+	var tween = create_tween()
+	tween.tween_property(self, "speed", max_speed, 3)
 
 func _physics_process(delta):
-	if active:
-		var next_path_pos: Vector2 = $NavigationAgent2D.get_next_path_position()
-		var direction: Vector2 = (next_path_pos - global_position).normalized()
-		velocity = direction * speed
-		var look_angle = direction.angle()
-		rotation = look_angle + PI / 2
-		var collision = move_and_collide(velocity * delta)
-		if collision:
-			$AnimationPlayer.play("explosion")
-			speed_multiplier = 0
+	var next_path_pos: Vector2 = $NavigationAgent2D.get_next_path_position()
+	var direction: Vector2 = (next_path_pos - global_position).normalized()
+	velocity = direction * speed
+	var look_angle = direction.angle()
+	rotation = look_angle + PI / 2
+	var collision = move_and_collide(velocity * delta)
+	
+	if collision:
+		$AnimationPlayer.play("explosion")
+	
 	if explosion_active:
 		var targets = get_tree().get_nodes_in_group("Container") + get_tree().get_nodes_in_group("Entity")
 		explosion_active = false
@@ -48,17 +48,12 @@ func _physics_process(delta):
 				target.hit(explosion_damage)
 
 
-
-func _on_notice_area_body_entered(_body):
-	active = true
-	var tween = create_tween()
-	tween.tween_property(self, "speed", max_speed, 3)
-
-
 func explosion_status_update():
-	explosion_active = true
+	set_physics_process(false)
+	speed = 0
+	speed_multiplier = 0
 
 
 func _on_navigation_timer_timeout():
-	if active:
+	if update_navigation:
 		$NavigationAgent2D.target_position = Globals.player_pos

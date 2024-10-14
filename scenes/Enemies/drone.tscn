@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://6qrnui754hcx"]
+[gd_scene load_steps=10 format=3 uid="uid://6qrnui754hcx"]
 
-[ext_resource type="Shader" path="res://scenes/Enemies/drone.gdshader" id="1_k0pca"]
+[ext_resource type="Shader" path="res://scripts/drone.gdshader" id="1_k0pca"]
 [ext_resource type="Texture2D" uid="uid://bcr7axwu3ikur" path="res://graphics/enemies/drone.png" id="1_xypy5"]
-[ext_resource type="Script" path="res://scenes/Enemies/drone.gd" id="1_y13ec"]
+[ext_resource type="Script" path="res://scripts/drone.gd" id="1_y13ec"]
 [ext_resource type="Texture2D" uid="uid://clwylejr5m2xu" path="res://graphics/explosions/explosion_1.png" id="3_xbkfq"]
 [ext_resource type="AudioStream" uid="uid://rdrgetcxkwho" path="res://audio/solid_impact.ogg" id="5_87f8o"]
 
@@ -10,9 +10,6 @@
 shader = ExtResource("1_k0pca")
 shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/progress = 0.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_5xlx1"]
-radius = 6623.01
 
 [sub_resource type="Animation" id="Animation_olqbm"]
 length = 0.001
@@ -105,12 +102,6 @@ polygon = PackedVector2Array(-5, -72, -21, -66, -25, -71, -31, -69, -33, -62, -5
 material = SubResource("ShaderMaterial_cx8nc")
 texture = ExtResource("1_xypy5")
 
-[node name="Notice Area" type="Area2D" parent="."]
-collision_layer = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Notice Area"]
-shape = SubResource("CircleShape2D_5xlx1")
-
 [node name="Explosion" type="Sprite2D" parent="."]
 texture = ExtResource("3_xbkfq")
 hframes = 8
@@ -131,5 +122,4 @@ autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
-[connection signal="body_entered" from="Notice Area" to="." method="_on_notice_area_body_entered"]
 [connection signal="timeout" from="NavigationTimer" to="." method="_on_navigation_timer_timeout"]

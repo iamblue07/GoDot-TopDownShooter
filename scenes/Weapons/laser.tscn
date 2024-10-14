@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cd758n3xcogy2"]
 
-[ext_resource type="Script" path="res://scenes/laser.gd" id="1_2eqor"]
+[ext_resource type="Script" path="res://scripts/laser.gd" id="1_2eqor"]
 [ext_resource type="Texture2D" uid="uid://cva7p70namke6" path="res://graphics/projectiles/blue.png" id="2_xo2wa"]
 [ext_resource type="AudioStream" uid="uid://xqj2p150iphs" path="res://audio/laser.wav" id="3_u5pj3"]
 

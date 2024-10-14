@@ -2,6 +2,7 @@ extends Node2D
 
 signal player_entered()
 signal player_exited()
+signal spawn_monster()
 
 func _on_interior_body_entered(body):
 	if body.is_in_group("Player"):
@@ -34,3 +35,7 @@ func hide_lights():
 	for child in $Lights.get_children():
 		child.visible = false
 
+
+
+func _on_monster_respawn_timer_timeout():
+	spawn_monster.emit()

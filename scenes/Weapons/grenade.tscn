@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ddqg87xlyvdsf"]
 
 [ext_resource type="Texture2D" uid="uid://drh1otvk8rj2h" path="res://graphics/projectiles/grenade.png" id="1_6yxmg"]
-[ext_resource type="Script" path="res://scenes/grenade.gd" id="1_spe8a"]
+[ext_resource type="Script" path="res://scripts/grenade.gd" id="1_spe8a"]
 [ext_resource type="AudioStream" uid="uid://cphvlrcudwme0" path="res://audio/explosion.wav" id="2_rl5v5"]
 [ext_resource type="Texture2D" uid="uid://dllbnrkttgk25" path="res://graphics/explosions/explosion_3.png" id="3_igiei"]
 [ext_resource type="Texture2D" uid="uid://cjcg3ghjhdkqw" path="res://graphics/lights/textures/circle.png" id="4_gdxtc"]

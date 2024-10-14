@@ -1,6 +1,6 @@
 extends RootLevel
 
-var level_2_scene_string = "res://scenes/Level_2.tscn"
+var level_2_scene_string = "res://scenes/Levels and Locations/PlaytestInterior.tscn"
 
 
 

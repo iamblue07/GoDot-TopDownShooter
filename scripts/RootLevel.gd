@@ -1,8 +1,8 @@
 extends Node2D
 class_name RootLevel
 
-var laser_scene = preload("res://scenes/laser.tscn")
-var grenade_scene = preload("res://scenes/grenade.tscn")
+var laser_scene = preload("res://scenes/Weapons/laser.tscn")
+var grenade_scene = preload("res://scenes/Weapons/grenade.tscn")
 var item_scene = preload("res://Items/item.tscn")
 var GRENADE_SPEED = 175
 

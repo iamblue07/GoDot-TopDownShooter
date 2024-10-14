@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://7imfut3j2u8k"]
 
-[ext_resource type="Script" path="res://scenes/ui.gd" id="1_6voem"]
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_6voem"]
 [ext_resource type="Texture2D" uid="uid://cmifccbkhwtc7" path="res://graphics/ui/bullet.png" id="1_72f3c"]
-[ext_resource type="Theme" uid="uid://cmhm4rxqvy4qq" path="res://scenes/main_theme.tres" id="1_86qyh"]
+[ext_resource type="Theme" uid="uid://cmhm4rxqvy4qq" path="res://Tilesets/main_theme.tres" id="1_86qyh"]
 [ext_resource type="Texture2D" uid="uid://15u3ss4qygjb" path="res://graphics/ui/grenade.png" id="2_jte7w"]
 [ext_resource type="Texture2D" uid="uid://cxvbamy5qoync" path="res://graphics/ui/progress_bar/bg.png" id="4_jncjs"]
 [ext_resource type="Texture2D" uid="uid://205n2xromdmk" path="res://graphics/ui/progress_bar/progress.png" id="5_gqi3f"]

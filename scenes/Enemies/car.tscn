@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c8ufxoytg4guj"]
 
 [ext_resource type="Texture2D" uid="uid://cjocfdqpjflvc" path="res://graphics/car/main.png" id="1_rtiys"]
-[ext_resource type="Script" path="res://scenes/Enemies/car.gd" id="1_uxl0c"]
+[ext_resource type="Script" path="res://scripts/car.gd" id="1_uxl0c"]
 [ext_resource type="Texture2D" uid="uid://cbw84bqqfmvsl" path="res://graphics/car/turret.png" id="3_1ecbd"]
 [ext_resource type="Texture2D" uid="uid://c5chtetbbhelr" path="res://graphics/explosions/gun.png" id="4_xly7n"]
 
