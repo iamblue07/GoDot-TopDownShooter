@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dvis706ww20dr"]
+[gd_scene load_steps=29 format=3 uid="uid://dvis706ww20dr"]
 
 [ext_resource type="PackedScene" uid="uid://blb44srx1vhhy" path="res://scenes/Generics/RootLevel.tscn" id="1_tryr3"]
 [ext_resource type="Script" path="res://scripts/AlienInfestation.gd" id="2_jp6q1"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b3hd5w3rhisge" path="res://graphics/objects/electric_hole.png" id="20_j46va"]
 [ext_resource type="Texture2D" uid="uid://c0np8du8swrfr" path="res://graphics/objects/ventilation_surface_small.png" id="21_6mbir"]
 [ext_resource type="PackedScene" uid="uid://kkrah3shshtl" path="res://scenes/Levels and Locations/small_lab.tscn" id="25_arlgg"]
+[ext_resource type="PackedScene" uid="uid://dgro3xdk4qw3n" path="res://scenes/Enemies/scout.tscn" id="26_5878t"]
 [ext_resource type="Texture2D" uid="uid://dtrux1lm7n0sh" path="res://graphics/ground/Mesh.png" id="30_5yuai"]
 [ext_resource type="PackedScene" uid="uid://fgl114on37kf" path="res://scenes/Decorations/broken_car.tscn" id="31_5185x"]
 [ext_resource type="PackedScene" uid="uid://c0vcu6b0elbgk" path="res://scenes/Decorations/fan.tscn" id="32_2gme4"]
@@ -498,6 +499,24 @@ position = Vector2(2967, -34)
 [node name="CarDepo" parent="Locations" index="1" instance=ExtResource("40_pa1nf")]
 position = Vector2(13415, 8857)
 rotation = 2.28638
+
+[node name="Scout" parent="Enemies" index="0" instance=ExtResource("26_5878t")]
+position = Vector2(9777, -8769)
+
+[node name="Scout2" parent="Enemies" index="1" instance=ExtResource("26_5878t")]
+position = Vector2(7701, -7741)
+
+[node name="Scout3" parent="Enemies" index="2" instance=ExtResource("26_5878t")]
+position = Vector2(7197, -5282)
+
+[node name="Scout4" parent="Enemies" index="3" instance=ExtResource("26_5878t")]
+position = Vector2(12881, -8467)
+
+[node name="Scout5" parent="Enemies" index="4" instance=ExtResource("26_5878t")]
+position = Vector2(12176, -6370)
+
+[node name="Scout6" parent="Enemies" index="5" instance=ExtResource("26_5878t")]
+position = Vector2(10563, -3971)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Navigation Meshes" index="0"]
 position = Vector2(3526, -9575)

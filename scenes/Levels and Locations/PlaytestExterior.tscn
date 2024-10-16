@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://buecxlq26pplf"]
+[gd_scene load_steps=25 format=3 uid="uid://buecxlq26pplf"]
 
 [ext_resource type="PackedScene" uid="uid://blb44srx1vhhy" path="res://scenes/Generics/RootLevel.tscn" id="1_j06pc"]
 [ext_resource type="Script" path="res://scripts/PlaytestExterior.gd" id="2_c5a4w"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b3n6t283y81lu" path="res://scenes/Enemies/bug.tscn" id="14_ydiwk"]
 [ext_resource type="PackedScene" uid="uid://dgro3xdk4qw3n" path="res://scenes/Enemies/scout.tscn" id="15_6wwq2"]
 [ext_resource type="PackedScene" uid="uid://c8ufxoytg4guj" path="res://scenes/Enemies/car.tscn" id="16_5w8jf"]
+[ext_resource type="PackedScene" uid="uid://lp502l6gih35" path="res://scenes/Enemies/AssembledRobot.tscn" id="16_6a4wn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_28a81"]
 resource_name = "Walls"
@@ -208,7 +209,10 @@ position = Vector2(463, 1176)
 position = Vector2(4412, 877)
 
 [node name="Scout" parent="Enemies" index="4" instance=ExtResource("15_6wwq2")]
-position = Vector2(984, 1910)
+position = Vector2(1112, 1083)
+
+[node name="Robot" parent="Enemies" index="5" instance=ExtResource("16_6a4wn")]
+position = Vector2(-342, -1896)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level Barriers" index="0"]
 physics_material_override = SubResource("PhysicsMaterial_kphsq")

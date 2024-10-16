@@ -26,16 +26,18 @@ func fire():
 	tween.tween_property(gunfire2, "modulate:a", 0, 0.2)
 	
 
-func _on_notice_area_body_entered(_body):
-	player_near = true
-	$AnimationPlayer.play("laser_load")
+func _on_notice_area_body_entered(body):
+	if body.is_in_group("Player"):
+		player_near = true
+		$AnimationPlayer.play("laser_load")
 
-func _on_notice_area_body_exited(_body):
-	player_near = false
-	$AnimationPlayer.pause()
-	var tween = create_tween()
-	tween.set_parallel(true)
-	tween.tween_property(line1, "width", 0, 1)
-	tween.tween_property(line2, "width", 0, 1)
-	await tween.finished
-	$AnimationPlayer.stop()
+func _on_notice_area_body_exited(body):
+	if body.is_in_group("Player"):
+		player_near = false
+		$AnimationPlayer.pause()
+		var tween = create_tween()
+		tween.set_parallel(true)
+		tween.tween_property(line1, "width", 0, 1)
+		tween.tween_property(line2, "width", 0, 1)
+		await tween.finished
+		$AnimationPlayer.stop()

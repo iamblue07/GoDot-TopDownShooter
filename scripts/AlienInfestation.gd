@@ -4,6 +4,7 @@ var hunter = preload("res://scenes/Enemies/hunter.tscn")
 var bug = preload("res://scenes/Enemies/bug.tscn")
 var drone = preload("res://scenes/Enemies/drone.tscn")
 var scout = preload("res://scenes/Enemies/scout.tscn")
+var robot = preload("res://scenes/Enemies/AssembledRobot.tscn")
 
 func _on_house_house_entered():
 	var tween = create_tween()
@@ -39,18 +40,37 @@ func _on_small_lab_spawn_monster():
 	var marker: Marker2D = $"Locations/Small Lab"/MonsterRespawnPoints.get_child(randi() % $"Locations/Small Lab"/MonsterRespawnPoints.get_child_count())
 	var enemy
 	var odds = randi_range(0,100)
-	if odds < 25:
+	if odds < 20:
 		enemy = hunter.instantiate()
-	elif odds < 50:
+	elif odds < 40:
 		enemy = bug.instantiate()
-	else:
+	elif odds < 60:
 		enemy = drone.instantiate()
+	elif odds < 80:
+		enemy = scout.instantiate()
+		enemy.connect('laser', _on_scout_laser)
+	else:
+		enemy = robot.instantiate()
+		enemy.connect('RobotShooting', _on_robot_robot_shooting)
 	enemy.position = marker.global_position
 	$Enemies.add_child(enemy)
 
 
 func _on_car_depo_spawn_monster():
 	var marker: Marker2D = $Locations/CarDepo/MonsterRespawnPoints.get_child(randi() % $Locations/CarDepo/MonsterRespawnPoints.get_child_count())
-	var enemy = hunter.instantiate()
+	var enemy
+	var odds = randi_range(0,100)
+	if odds < 20:
+		enemy = hunter.instantiate()
+	elif odds < 40:
+		enemy = bug.instantiate()
+	elif odds < 60:
+		enemy = drone.instantiate()
+	elif odds < 80:
+		enemy = scout.instantiate()
+		enemy.connect('laser', _on_scout_laser)
+	else:
+		enemy = robot.instantiate()
+		enemy.connect('RobotShooting', _on_robot_robot_shooting)
 	enemy.position = marker.global_position
 	$Enemies.add_child(enemy)

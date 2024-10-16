@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://kkrah3shshtl"]
+[gd_scene load_steps=27 format=3 uid="uid://kkrah3shshtl"]
 
 [ext_resource type="Texture2D" uid="uid://4hldq4bloxtp" path="res://graphics/decals/ceiling_hole1.png" id="1_5mxaw"]
 [ext_resource type="TileSet" uid="uid://cncbhm762d52s" path="res://Tilesets/LevelTerrain.tres" id="1_tfbyg"]
@@ -25,6 +25,12 @@
 [ext_resource type="Texture2D" uid="uid://cjnh763u2bxb5" path="res://graphics/decals/brushes/brush056.png" id="21_l6eky"]
 [ext_resource type="Texture2D" uid="uid://gujdclfdji8s" path="res://graphics/decals/brushes/brush048.png" id="22_an778"]
 [ext_resource type="Texture2D" uid="uid://d0tmu4m4qh6io" path="res://graphics/decals/blood.png" id="23_qcpjg"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_2remy"]
+vertices = PackedVector2Array(2136, 88, 2135, 87, 2379, 240, 3759, 482, 5381, -4168, 5650, 4872, 2842, 4430, 3753, -1026, 2697, 1412, 3607, 511, 2683, 504, 2683, 503, 3648, -836, -481, -1052, -481, -1053, -296, -932, 1081, -344, 1119, 62, 1168, 1242, 838, -24, 838, -335, 1974, 11, 2385, 799, 2097, 699, 2159, 1602, 1446, 2234, 3189, -1072, 3012, -1052, 3002, -2631, 2339, -347, 1915, -1460, 1875, -2394, 2801, -2354, 2807, -883, 2626, -245, -63, -808, 496, 1986, -1157, 2000, -1157, 1704, -296, -931, 3485, -900, 3641, -914, -6199, 3368, -5963, -4177, 113, -4144, -1921, -1505, 286, -1868, 314, -2434, 1639, -2427, 1663, -1434, 763, -1412, 483, -1519, 3479, -1065, 3162, -875, 1093, -344, 1584, 1569, -5238, 4921, 1019, 2398, 496, 2399, 56, -1852, 78, -1492, 56, -2642, -1584, 1568, -1578, -919, -1137, -1094, -585, -1107, 193, -941, 334, -438, 1942, 943, 1650, 996, 573, -54, 1162, 1815, 981, 1963, -1934, 2137, -1776, 2279, 340, -821)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(4, 3, 7), PackedInt32Array(8, 9, 3, 6), PackedInt32Array(9, 8, 10, 11, 12), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 18, 19, 20), PackedInt32Array(21, 0, 2, 22, 23, 17), PackedInt32Array(24, 8, 6, 25), PackedInt32Array(26, 27, 28), PackedInt32Array(29, 30, 31, 32, 33, 34), PackedInt32Array(35, 36, 37, 38, 39), PackedInt32Array(34, 40, 41, 12, 11), PackedInt32Array(42, 43, 44, 45), PackedInt32Array(46, 47, 48, 49, 50, 51), PackedInt32Array(16, 20, 50), PackedInt32Array(52, 40, 26, 28), PackedInt32Array(53, 26, 40), PackedInt32Array(53, 40, 34), PackedInt32Array(33, 53, 34), PackedInt32Array(30, 29, 54, 49), PackedInt32Array(25, 55, 24), PackedInt32Array(25, 6, 56, 57), PackedInt32Array(57, 56, 42, 58), PackedInt32Array(54, 16, 50, 49), PackedInt32Array(59, 46, 51, 60, 45), PackedInt32Array(61, 59, 45), PackedInt32Array(38, 62, 63, 64, 65, 13, 15, 39), PackedInt32Array(36, 35, 66, 67), PackedInt32Array(4, 7, 52, 28), PackedInt32Array(44, 4, 28, 61), PackedInt32Array(17, 23, 68, 69), PackedInt32Array(17, 69, 18), PackedInt32Array(36, 70, 19, 18, 71, 72), PackedInt32Array(44, 61, 45), PackedInt32Array(42, 45, 73), PackedInt32Array(42, 73, 74), PackedInt32Array(66, 75, 67), PackedInt32Array(36, 67, 70), PackedInt32Array(36, 72, 57, 58), PackedInt32Array(42, 74, 58)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1139, -1104, -1588, -926, -1595, 1576, -1167, 1711, -1167, 2011, 486, 1996, 486, 2388, 1029, 2386, 991, 1967, 1172, 1820, 1178, 1248, 1653, 1006, 1948, 953, 2101, 711, 2396, 813, 2389, 236, 2140, 79, 1976, 1, 1128, 51, 1092, -334, 828, -334, 828, -35, 579, -63, 344, -441, 351, -826, 194, -954, -63, -819, -291, -940, -476, -1061, -583, -1118), PackedVector2Array(66, -1863, 276, -1877, 305, -2445, 1649, -2437, 1673, -1445, 1905, -1469, 1865, -2405, 2811, -2364, 2817, -893, 3153, -885, 3177, -1061, 3489, -1053, 3495, -911, 3650, -925, 3659, -837, 3617, 499, 2673, 504, 2617, -238, 2337, -337, 1093, -334, 828, -334, 753, -1405, 481, -1509, 79, -1482), PackedVector2Array(2673, 504, 2687, 1405, 2158, 1592, 1576, 1559, 1437, 2227, 1028, 2385, 486, 2388, 514, 2889, 2842, 4440, 3717, 2894, 3617, 499), PackedVector2Array(66, -1863, 66, -2632, 2992, -2621, 3003, -1041, 3177, -1061, 3489, -1053, 3743, -1017, 3749, 474, 3617, 499, 3711, 2893, 2842, 4440, 5661, 4884, 5391, -4179, 113, -4154, -5973, -4188, -6210, 3372, -5244, 4932, 2842, 4440, 514, 2889, 486, 2388, -1772, 2269, -1924.46, 2133.41, -1911, -1495, 79, -1482)])
+source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Small Lab" type="Node2D"]
 script = ExtResource("1_yhroo")
@@ -289,6 +295,12 @@ position = Vector2(2169, 224)
 position = Vector2(2723, -2309)
 
 [node name="MonsterRespawnTimer" type="Timer" parent="."]
+wait_time = 2.0
 autostart = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
+position = Vector2(5, -6)
+navigation_polygon = SubResource("NavigationPolygon_2remy")
 
 [connection signal="timeout" from="MonsterRespawnTimer" to="." method="_on_monster_respawn_timer_timeout"]

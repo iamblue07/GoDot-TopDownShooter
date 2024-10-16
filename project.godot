@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="12h Tutorial"
-run/main_scene="res://scenes/PlaytestExterior.tscn"
+run/main_scene="res://scenes/Levels and Locations/AlienInfestation.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://scenes/icon.svg"
 

@@ -13,6 +13,9 @@ func _ready():
 	for scout in get_tree().get_nodes_in_group("Scouts"):
 		scout.connect('laser', _on_scout_laser)
 	
+	for robot in get_tree().get_nodes_in_group("Robots"):
+		robot.connect('RobotShooting', _on_robot_robot_shooting)
+	
 func _on_container_opened(pos, direction):
 	var item = item_scene.instantiate()
 	item.position = pos
@@ -33,12 +36,19 @@ func _on_player_grenade(pos, direction):
 
 
 func _on_scout_laser(pos, direction):
+	print("Scout shooting laser")
 	create_laser(pos, direction)
 
 
 func create_laser(pos, direction):
+	print("laser instantiated")
 	var laser = laser_scene.instantiate() as Area2D
 	laser.position = pos
 	laser.direction = direction
 	laser.rotation = direction.angle()
 	$Projectiles.add_child(laser)
+
+
+func _on_robot_robot_shooting(pos, direction):
+	print("Robot shooting laser")
+	create_laser(pos, direction)
