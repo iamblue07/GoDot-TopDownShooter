@@ -1,7 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://lp502l6gih35"]
+[gd_scene load_steps=77 format=3 uid="uid://lp502l6gih35"]
 
 [ext_resource type="Script" path="res://scripts/EnemyRobot.gd" id="1_kof20"]
 [ext_resource type="Texture2D" uid="uid://cftfbvacmwtld" path="res://graphics/Robot/Robot_0025_Knee-R.png" id="2_p4hf2"]
+[ext_resource type="Shader" path="res://scripts/HitBlinking.gdshader" id="2_ukqkw"]
 [ext_resource type="Texture2D" uid="uid://n5g8w0cscprg" path="res://graphics/Robot/Robot_0027_Shin-R.png" id="3_d7dom"]
 [ext_resource type="Texture2D" uid="uid://4wy6g6si3pm5" path="res://graphics/Robot/Robot_0029_Foot-R.png" id="4_11ft7"]
 [ext_resource type="Texture2D" uid="uid://cuh1dpj6w6yph" path="res://graphics/Robot/Robot_0023_Hip-R.png" id="5_pac0y"]
@@ -82,6 +83,166 @@ modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_ybd0y")
 modifications/2 = SubResource("SkeletonModification2DTwoBoneIK_h7qvf")
 modifications/3 = SubResource("SkeletonModification2DTwoBoneIK_1ja1b")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b0xbc"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sqg5n"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lx5aw"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1qwi3"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mgfug"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ww0fp"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wkxx7"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wppmt"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bk5pd"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_spgcs"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nk7vh"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nkq5s"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ta878"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_awp60"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fj4vl"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w5esy"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_afdei"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1127q"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcmcu"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xx0cj"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fjjsm"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0unf2"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qijll"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t5mjl"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dr7t1"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hfeu1"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6jw3"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5j00i"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hambn"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e027m"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mal31"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1d25w"]
+shader = ExtResource("2_ukqkw")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/progress = 0.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_jxfg8"]
 radius = 12819.0
 
@@ -90,59 +251,6 @@ size = Vector2(1588, 1635.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pg7ua"]
 radius = 8170.35
-
-[sub_resource type="Animation" id="Animation_02vq3"]
-resource_name = "walk"
-length = 1.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimationMarkers/RightArmMarker:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(500, -716.667), Vector2(523.333, -1000), Vector2(496.667, -1196.67), Vector2(500, -716.667)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimationMarkers/LeftArmMarker:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-516.667, -1073.33), Vector2(-586.667, -836.667), Vector2(-303.333, -826.667), Vector2(-516.667, -1073.33)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AnimationMarkers/RightLegMarker:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(363.333, -66.6667), Vector2(373.333, 200), Vector2(270, 350), Vector2(363.333, -66.6667)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AnimationMarkers/LeftLegMarker:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-390, 233.333), Vector2(-363.333, 50), Vector2(-406.667, -143.333), Vector2(-390, 233.333)]
-}
 
 [sub_resource type="Animation" id="Animation_7exfk"]
 resource_name = "shooting_animation"
@@ -210,6 +318,59 @@ tracks/4/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_02vq3"]
+resource_name = "walk"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationMarkers/RightArmMarker:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(500, -716.667), Vector2(523.333, -1000), Vector2(496.667, -1196.67), Vector2(500, -716.667)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationMarkers/LeftArmMarker:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-516.667, -1073.33), Vector2(-586.667, -836.667), Vector2(-303.333, -826.667), Vector2(-516.667, -1073.33)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationMarkers/RightLegMarker:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(363.333, -66.6667), Vector2(373.333, 200), Vector2(270, 350), Vector2(363.333, -66.6667)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationMarkers/LeftLegMarker:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-390, 233.333), Vector2(-363.333, 50), Vector2(-406.667, -143.333), Vector2(-390, 233.333)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xib66"]
 _data = {
 "shooting_animation": SubResource("Animation_7exfk"),
@@ -246,18 +407,22 @@ bone_angle = 86.539
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Robot0025Knee-r" type="Sprite2D" parent="Skeleton2D/Torso/RightLegUpper/RightLegLower"]
+material = SubResource("ShaderMaterial_b0xbc")
 position = Vector2(-9, 34)
 texture = ExtResource("2_p4hf2")
 
 [node name="Robot0027Shin-r" type="Sprite2D" parent="Skeleton2D/Torso/RightLegUpper/RightLegLower/Robot0025Knee-r"]
+material = SubResource("ShaderMaterial_sqg5n")
 position = Vector2(18, 212)
 texture = ExtResource("3_d7dom")
 
 [node name="Robot0029Foot-r" type="Sprite2D" parent="Skeleton2D/Torso/RightLegUpper/RightLegLower/Robot0025Knee-r/Robot0027Shin-r"]
+material = SubResource("ShaderMaterial_lx5aw")
 position = Vector2(40, 157)
 texture = ExtResource("4_11ft7")
 
 [node name="Robot0023Hip-r" type="Sprite2D" parent="Skeleton2D/Torso/RightLegUpper"]
+material = SubResource("ShaderMaterial_1qwi3")
 position = Vector2(30, -145)
 texture = ExtResource("5_pac0y")
 
@@ -275,18 +440,22 @@ bone_angle = 93.461
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Robot0024Knee-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftLegUpper/LeftLegLower"]
+material = SubResource("ShaderMaterial_mgfug")
 position = Vector2(2, 28)
 texture = ExtResource("6_1qnw6")
 
 [node name="Robot0026Shin-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftLegUpper/LeftLegLower/Robot0024Knee-l"]
+material = SubResource("ShaderMaterial_ww0fp")
 position = Vector2(-16, 202)
 texture = ExtResource("7_5ikbi")
 
 [node name="Robot0028Foot-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftLegUpper/LeftLegLower/Robot0024Knee-l/Robot0026Shin-l"]
+material = SubResource("ShaderMaterial_wkxx7")
 position = Vector2(-51, 163)
 texture = ExtResource("8_jt1jj")
 
 [node name="Robot0022Hip-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftLegUpper"]
+material = SubResource("ShaderMaterial_wppmt")
 position = Vector2(-50, -131)
 texture = ExtResource("9_okod7")
 
@@ -304,26 +473,32 @@ bone_angle = -103.776
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Robot0015Cubit-r" type="Sprite2D" parent="Skeleton2D/Torso/RightArmUpper/RightArmLower"]
+material = SubResource("ShaderMaterial_bk5pd")
 position = Vector2(-15, 2)
 texture = ExtResource("10_ww4tq")
 
 [node name="Robot0017Forearm-r" type="Sprite2D" parent="Skeleton2D/Torso/RightArmUpper/RightArmLower/Robot0015Cubit-r"]
+material = SubResource("ShaderMaterial_spgcs")
 position = Vector2(-54, -138)
 texture = ExtResource("11_kca54")
 
 [node name="Robot0013Wrist-r" type="Sprite2D" parent="Skeleton2D/Torso/RightArmUpper/RightArmLower/Robot0015Cubit-r/Robot0017Forearm-r"]
+material = SubResource("ShaderMaterial_nk7vh")
 position = Vector2(-110, -240)
 texture = ExtResource("12_saidw")
 
 [node name="Robot0011Bolter-charging-cord" type="Sprite2D" parent="Skeleton2D/Torso/RightArmUpper/RightArmLower/Robot0015Cubit-r/Robot0017Forearm-r/Robot0013Wrist-r"]
+material = SubResource("ShaderMaterial_nkq5s")
 position = Vector2(-45, 286)
 texture = ExtResource("13_qh242")
 
 [node name="Robot0000Action-bolter" type="Sprite2D" parent="Skeleton2D/Torso/RightArmUpper/RightArmLower/Robot0015Cubit-r/Robot0017Forearm-r/Robot0013Wrist-r/Robot0011Bolter-charging-cord"]
+material = SubResource("ShaderMaterial_ta878")
 position = Vector2(53, -507)
 texture = ExtResource("14_dpq4j")
 
 [node name="Robot0010Top-arm-r" type="Sprite2D" parent="Skeleton2D/Torso/RightArmUpper"]
+material = SubResource("ShaderMaterial_awp60")
 position = Vector2(127, -50)
 texture = ExtResource("15_fosar")
 
@@ -341,32 +516,38 @@ bone_angle = -90.0
 metadata/_local_pose_override_enabled_ = true
 
 [node name="Robot0014Cubit-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftArmUpper/LeftArmLower"]
+material = SubResource("ShaderMaterial_fj4vl")
 position = Vector2(13.1321, 6.29224)
 rotation = -0.00216027
 texture = ExtResource("16_rmo87")
 
 [node name="Robot0016Forearm-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftArmUpper/LeftArmLower/Robot0014Cubit-l"]
+material = SubResource("ShaderMaterial_w5esy")
 position = Vector2(55.1989, -153.173)
 rotation = -0.0268874
 texture = ExtResource("17_5c2fw")
 
 [node name="Robot0012Wrist-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftArmUpper/LeftArmLower/Robot0014Cubit-l/Robot0016Forearm-l"]
+material = SubResource("ShaderMaterial_afdei")
 position = Vector2(128.152, -244.381)
 rotation = -0.122975
 texture = ExtResource("18_mossp")
 
 [node name="Robot0011Bolter-charging-cord" type="Sprite2D" parent="Skeleton2D/Torso/LeftArmUpper/LeftArmLower/Robot0014Cubit-l/Robot0016Forearm-l/Robot0012Wrist-l"]
+material = SubResource("ShaderMaterial_1127q")
 position = Vector2(35.7244, 188.724)
 rotation = 0.133881
 texture = ExtResource("13_qh242")
 flip_h = true
 
 [node name="Robot0000Action-bolter" type="Sprite2D" parent="Skeleton2D/Torso/LeftArmUpper/LeftArmLower/Robot0014Cubit-l/Robot0016Forearm-l/Robot0012Wrist-l/Robot0011Bolter-charging-cord"]
+material = SubResource("ShaderMaterial_jcmcu")
 position = Vector2(-64.6603, -434.878)
 texture = ExtResource("14_dpq4j")
 flip_h = true
 
 [node name="Robot0009Top-arm-l" type="Sprite2D" parent="Skeleton2D/Torso/LeftArmUpper"]
+material = SubResource("ShaderMaterial_xx0cj")
 position = Vector2(-126.78, -47.0708)
 rotation = -0.00216027
 texture = ExtResource("19_4xdjf")
@@ -375,49 +556,61 @@ texture = ExtResource("19_4xdjf")
 position = Vector2(-8, -248)
 
 [node name="Robot0008Central-engine" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_fjjsm")
 position = Vector2(2, -21)
 texture = ExtResource("20_tr1cf")
 
 [node name="Robot0021Pelvis" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_0unf2")
 position = Vector2(-9, 155)
 texture = ExtResource("21_yv6t7")
 
 [node name="Robot0019Pelvic-joint-l" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_qijll")
 position = Vector2(-157, 169)
 texture = ExtResource("22_drbhb")
 
 [node name="Robot0020Pelvic-joint-r" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_t5mjl")
 position = Vector2(157, 176)
 texture = ExtResource("23_kh6x2")
 
 [node name="Robot0004Neck" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_dr7t1")
 position = Vector2(2, -142)
 texture = ExtResource("24_ac7mc")
 
 [node name="Robot0006Shoulder-l" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_hfeu1")
 position = Vector2(-153, -115)
 texture = ExtResource("25_kgthe")
 
 [node name="Robot0007Shoulder-r" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_r6jw3")
 position = Vector2(156, -115)
 texture = ExtResource("26_ibnpe")
 
 [node name="Robot0002Booster-l" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_5j00i")
 position = Vector2(-157, 103)
 texture = ExtResource("27_2bija")
 
 [node name="Robot0003Booster-r" type="Sprite2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_hambn")
 position = Vector2(158, 102)
 texture = ExtResource("28_7kxho")
 
 [node name="Head" type="Node2D" parent="Skeleton2D/Torso/Torso"]
+material = SubResource("ShaderMaterial_e027m")
 position = Vector2(0, -283)
 
 [node name="Robot0005Mask" type="Sprite2D" parent="Skeleton2D/Torso/Torso/Head"]
+material = SubResource("ShaderMaterial_mal31")
 position = Vector2(2, -105)
 texture = ExtResource("29_frqgb")
 
 [node name="Robot0001Spinal-plate" type="Sprite2D" parent="Skeleton2D/Torso/Torso/Head"]
+material = SubResource("ShaderMaterial_1d25w")
 position = Vector2(3, 5)
 texture = ExtResource("30_27tjw")
 
